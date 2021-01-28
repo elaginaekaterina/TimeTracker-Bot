@@ -55,7 +55,6 @@ def acknowledge(message, say):
 if not os.path.isfile(db_path):
     init_db(sql_connection())
 
-# Install the Slack app and get xoxb- token in advance
 app = App(token=os.environ["SLACK_BOT_TOKEN"])
 client = WebClient(token=os.environ.get("SLACK_BOT_TOKEN"))
 
